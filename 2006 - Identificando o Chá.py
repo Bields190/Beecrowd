@@ -1,0 +1,5 @@
+cha = int((input()))
+alternativas = input()
+lista = alternativas.split()
+conta = lista.count(str(cha))
+print(conta)

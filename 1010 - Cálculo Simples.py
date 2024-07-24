@@ -1,0 +1,8 @@
+pro1 = input().split()
+pro2= input().split()
+qnt1 = int(pro1[1])
+pre1 = float(pro1[2])
+qnt2 = int(pro2[1])
+pre2 = float(pro2[2])
+soma = (qnt1*pre1)+(qnt2*pre2)
+print(f'VALOR A PAGAR: R$ %.2f'%soma)
