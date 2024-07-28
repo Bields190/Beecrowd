@@ -1,3 +1,4 @@
+
 temp = int(input())
 hora = 0
 minuto = 0
