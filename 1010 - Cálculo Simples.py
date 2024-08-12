@@ -1,5 +1,5 @@
 pro1 = input().split()
-pro2= input().split()
+pro2 = input().split()
 qnt1 = int(pro1[1])
 pre1 = float(pro1[2])
 qnt2 = int(pro2[1])
