@@ -1,0 +1,15 @@
+- FUNÇÕES EMBUTIDAS:
+
+- index (lista.index()) - retorna o índice do primeiro item encontrado na lista (lista.index(item, inicio, fim)
+    essa função só vai retornar a PRIMEIRA ocorrência do ítem. A NAO SER QUE seja manipulado a procura da função.
+    ex:
+    >>>lista = ['b','a','n','a','n','a']
+    >>>lista.index('a', 2)
+    3
+
+    ou seja, irá retornar o valor depois do índice em que foi pedido a função
+- count (lista.count()) - retorna a quantidade de vezes que um ítem é encontrado em uma lista
+- min/max - retorna o minimo ou o máximo item da lista
+- sum - retorna a soma de todos os itens da lista
+- copy - retorna uma cópia da list (tipo o [:])
+- remove - remove a primeira ocorrencia de um valor específico (diferente do pop e o del, que utilizam o índice. O remove procura pelo VALOR, e não pelo índice)
