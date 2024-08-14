@@ -1,0 +1,33 @@
+- len(lista) - retorna o tamanho do vetor
+    ex: for i in range(len(notas))
+                 ^^^^^^^^^^^^^^^^^
+                 tamanho (len) na lista(notas)
+- lista.pop[indice] - apaga
+- del lista[] - apaga
+- in - verifica se uma coisa específica está dentro da lista declarada.
+    ex: lista = [0, 5, 7]
+    >>>0 in notas
+    True
+    >>>6 in notas
+    False
+- reverse - altera as posições dos vetores. O indice 0 vira ultimo e o ultimo vira 0. Ele altera O VETOR
+    ex: lista = [1, 2, 3, 4]
+    >>>lista.reverse()
+    >>>lista
+    [4, 3, 2, 1]
+- sort - organiza os elementos, porém sendo SOMENTE numeros ou somente letras.
+>método = lista.sort(reverse=True)
+- + - adiciona elemntos como um append
+    ex: lista = [1, 2, 3]
+    >>>lista + [5, 6, 7]
+    >>>lista
+    [1, 2, 3, 5, 6, 7]
+- [:] = lista.copy --- Feito pra criar uma CÓPIA de uma lista
+    ex: >>>copia_lista = lista[:]
+    #ele vai criar uma cópia da lista em um endereço diferente. mesma coisa de
+        >>>copia_lista2 = lista.copy()
+    PORÉM o [:] consegue fatiar os bgl tlgd
+    ex: >>>lista = [1, 2, 3, 4]
+        >>>copia = lista[1:3] # ele vai cortar os index
+        >>>copia
+        [2, 3]
