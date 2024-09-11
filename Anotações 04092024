@@ -83,7 +83,7 @@ Ex:
 76
 >>> print(chr(ord(letra)-32))
 L
-*-*-*-*-*-*-*FUNÇÕES VERIFICADORAS EM STRING-*-*-*-*-*-*-*-:
+*-*-*-*-*-*-*FUNÇÕES VERIFICADORAS EM STRING*-*-*-*-*-*-*-*-:
 >!> isalnum() - verifica se a string ~vazia e se todos os caracteres são letras, numeros ou uma combinação #espaço n vale
 EX:
 >>> str_espaço.strip().isalnum()
