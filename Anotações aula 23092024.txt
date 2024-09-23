@@ -1,0 +1,24 @@
+**COLEÇÕES: TUPLA, SET E DICIONÁRIO**
+
+tupla != lista
+- Enquanto listas utilizam colchetes "[]" para delimitação, as tuplas utilizam parênteses "()" (que são opcionais)
+- Tuplas são IMUTÁVEIS. Utilizadas quando não há necessidade de adicionar, remover ou alterar elementos de um grupo de itens.
+* Também sao usadas em programas python com funções que recebem ou retornam múltiplos valores
+
+- é declarada e acessada da mesma forma que uma lista.
+    Ex:
+    >>> tupla = ()
+    >>> type(tupla)
+    <class 'tuple'>
+- Pode ser colocado qualquer coisa dentro de uma tupla. Inclusive listas dentro de tupla e tupla dentro de tupla.
+- Por ser IMUTÁVEL, não é possivel adicionar (.append) ou mudar (somar, subtrair e manipular) dados de dentro da tupla. somente acessá-las
+- É possível FATIAR tuplas, criando assim uma nova tupla
+- Podemos fazer com tuplas as operações de:
+    * tamanho (len)
+    * concatenação ( x + y)
+    * repetição ( (x,) * 4)
+    * pertencimento (in)
+    * iteração (for)
+
+- Porém podemos transformar uma tupla em uma lista utilizando o **list()**
+    * E podemos transformar uma lista em uma tupla com o **tuple()**
