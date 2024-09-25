@@ -1,0 +1,268 @@
+**COLEÇÕES: TUPLA, SET E DICIONÁRIO**
+
+tupla != lista
+- Enquanto listas utilizam colchetes "[]" para delimitação, as tuplas utilizam parênteses "()" (que são opcionais)
+- Tuplas são IMUTÁVEIS. Utilizadas quando não há necessidade de adicionar, remover ou alterar elementos de um grupo de itens.
+* Também sao usadas em programas python com funções que recebem ou retornam múltiplos valores
+
+- é declarada e acessada da mesma forma que uma lista.
+    Ex:
+    >>> tupla = ()
+    >>> type(tupla)
+    <class 'tuple'>
+- Pode ser colocado qualquer coisa dentro de uma tupla. Inclusive listas dentro de tupla e tupla dentro de tupla.
+- Por ser IMUTÁVEL, não é possivel adicionar (.append) ou mudar (somar, subtrair e manipular) dados de dentro da tupla. somente acessá-las
+- É possível FATIAR tuplas, criando assim uma nova tupla
+- Podemos fazer com tuplas as operações de:
+    * tamanho (len)
+    * concatenação ( x + y)
+    * repetição ( (x,) * 4)
+    * pertencimento (in)
+    * iteração (for)
+
+- Porém podemos transformar uma tupla em uma lista utilizando o **list()**
+    * E podemos transformar uma lista em uma tupla com o **tuple()**
+
+
+-x-x-x-x-x-x-x-x-x-x-x-x-x-x-x-x-x-x-x-x-x-x-x-x-x-x-SET:-x-x-x-x-x-x-x-x-x-x-x-x-x-x-x-x-x-x-x-x-x-x-x-x-
+
+- Coleção não ordenada e que não admite elementos duplicados.
+- Delimitados por {chaves}
+- Usos básicos:
+    * Testes de associação
+    * eliminação de entradas duplicadas
+- MUTÁVEIS! ou seja, isso permite adicionar e excluir ítens. Porém seus itens devem ser IMUTÁVEIS (Como string, int ou tupla)
+- EX:
+>>> meu_set = {1,2,3,4,4}
+>>> meu_set
+{1, 2, 3, 4}
+
+- Para criar um conjunto vazio temos que usar a função set() (não set = {}, pois esse criaria um dicionário)
+- Podemos criar um set a partir de listas e tuplas. Utilizando a função set()
+-EX:
+>>> lista = [1,2,3,4,4]
+>>> tupla = (1,2,3,4,4)
+>>> lista_set = set(lista)
+>>> tupla_set = set(tupla)
+>>> lista_set
+{1, 2, 3, 4}
+- Também não temos controle sobre como ele vai armazenar esses dados.
+-EX:
+>>> set_teste = {3,5,2,1,0,8,4}
+>>> set_teste
+{0, 1, 2, 3, 4, 5, 8}
+-*-(ou seja, dependendo dos dados, ele vai armazenar de forma diferente. <SET NÃO É ORDENADO>)
+
+- Sets não possibilitam acessar seus elementos através de índices(como podemos fazer em listas e tuplas)
+- Ex:
+>>>meu_set = {1, 1, 3, 3, 2, 2, 5}
+>>>print(meu_set[0])
+<TypeError: 'set' object is not subscriptable>
+
+- Para acessar os elementos do set, podemos ITERAR sobre o mesmo.
+    * Para isso, podemos utilizar a função ENUMERATE:
+- EX:
+>>> for i,j in enumerate(set_teste):
+...     print(i, j)
+...
+0 0
+1 1
+2 2
+3 3
+4 4
+5 5
+6 8
+
+> em que (i) é o elemento e (j) é o conteúdo.
+- OU seja, não podemos acessar INDICES de um Set.
+- Podemos "ordenar" os elementos de um set através de lista.
+-EX:
+>>> meu_set = {'b', 'a', 'c', 'x'}
+>>> meu_set
+{'x', 'b', 'a', 'c'}
+>>> lista = list(meu_set) // transformando em lista
+>>> lista
+['x', 'b', 'a', 'c']
+>>> lista.sort() // ordenando
+>>> lista
+['a', 'b', 'c', 'x']
+>>> lista.sort()
+>>> lista
+['a', 'b', 'c', 'x']
+>>> lista.pop(1) // apagando o elemento 'b'
+'b'
+>>> lista
+['a', 'c', 'x']
+>>> meu_set = set(lista) // retransformando em um set
+>>> meu_set
+{'x', 'a', 'c'} // o set ligou o FDS pra ordenação
+
+- Para adicionar itens em um set, python fornece a função **add(item)**
+-EX:
+>>> meu_set.add('y')
+>>> meu_set.add('e')
+>>> meu_set.add('y')
+>>> meu_set
+{'x', 'e', 'y', 'a', 'c'}
+
+- E para remover, a função remove(item) ou discard(item) (porem ele dá erro no remove se tentar remover algo que não existe. O discard não dá erro)
+- EX:
+>>> meu_set.remove('y')
+>>> meu_set
+{'x', 'e', 'a', 'c'}
+>>> meu_set.discard('c')
+>>> meu_set
+{'x', 'e', 'a'}
+
+- Também podemos utiizar o pop(), porém não temos noção do ultimo elemento do set.
+-EX:
+>>> meu_set.pop()
+'x'
+>>> meu_set
+{'e', 'a'}
+
+- Para remover todos os itens de um set, podemos utilizar a função clear()
+-EX:
+>>> meu_set.clear()
+>>> meu_set
+set()
+
+x-x-x-x-x-x
+
+- Os sets possuem suporte para operações matemáticas, como união, interseção, diferença e diferença assimétrica
+-EX:
+>>> a = set('12345678')
+>>> a
+{'6', '2', '1', '7', '8', '3', '4', '5'}
+>>> b = set('44559900')
+>>> b
+{'4', '5', '0', '9'}
+
+- Para fazer operações, temos os operadores:
+    * | #união
+    * & # interseção (elementos que estão nos dois)
+    * - #diferença (retira de (a) os que estão em (b) ou vice versa. <DEPENDE DA ORDEM>)
+    * ^ # diferença simétrica (retorna todos os elementos que não fazem parte da interseção deles dois)
+- EX:
+>>> a | b
+{'6', '2', '1', '7', '8', '3', '4', '0', '9', '5'}
+>>> a & b
+{'4', '5'}
+>>> a - b
+{'6', '2', '1', '7', '3', '8'}
+>>> b - a
+{'0', '9'}
+>>> a ^ b
+{'6', '2', '1', '7', '8', '3', '0', '9'}
+
+x-x-x-x-subconjuntos-x-x-x-x-x
+- Operadores:
+    * <= # verifica se a é um subconjunto de b
+    * < # verifica se a é um subconjunto próprio de b (só será verdadeiro se os dois forem exatamente iguais)
+- EX:
+>>> a = {1,2,3,4}
+>>> b = {1,2,3}
+>>> b <= a
+True
+>>> b < a
+True
+>>> b.add(4)
+>>> b <= a
+True
+>>> b < a
+False
+
+-x-x-x-x-x-x-x-x-x-x-x-x-x-x-x-x-x-x-x-x-x-DICIONÁRIOS-x-x-x-x-x-x-x-x-x-x-x-x-x-x-x-x-x-x-x-x-x-x-x-x-x-x-x-x-x-x-
+- Tipo abstrato de dados que associa um conjunto de pares: **Uma chave a um valor**
+- A chave precisa ser única. Ou seja: não pode haver chaves repetidas.
+    > A chave deve ser IMUTÁVEL. Ou seja, uma vez criada, ela permanece a mesma.
+    > portanto, pode-se usar como chaves strings, números e túplas, mas não listas.
+- Dicionários são estruturas não-ordenadas como os conjuntos. mas poderosíssimas pois podemos acessar seus elementos através de chaves, e não pelo index.
+- Para criar um dicionário vazio, deve-se:
+>>> estoque = {}
+- Para colocar elementos, deve se colocar os elementos entre {chaves} separados por vírgula e usando :dois pontos: para separar a chave do valor
+    > primeiro_elemento_é_a_chave:segundo_elemento_é_o_valor
+- EX:
+>>> estoque = {'açai':200, 'biriba':50, 'jabuticaba':100, 'abiu':20}
+>>> estoque
+{'açai': 200, 'biriba': 50, 'jabuticaba': 100, 'abiu': 20}
+>>> estoque['jabuticaba']
+100
+>>> estoque['açai']
+200
+>>> estoque['biriba']
+50
+>>> estoque['abiu']
+20
+
+- Podemos transformar (e criar) dicionários pela função **dict()**
+-EX:
+>>> lista = [(1, 'Janeiro'), (2, 'Fevereiro')]
+>>> lista
+[(1, 'Janeiro'), (2, 'Fevereiro')]
+>>> meses = dict(lista)
+>>> meses
+{1: 'Janeiro', 2: 'Fevereiro'}
+
+- O dicionário possui uma função chamada keys() que
+devolve o conjunto de suas chaves.
+- Uma função chamada values() que retorna seus
+valores.
+- Assim como uma função items() que retorna o par
+chave, valor
+- EX:
+>>> meses.keys()
+dict_keys([1, 2])
+>>> meses.values()
+dict_values(['Janeiro', 'Fevereiro'])
+>>> meses.items()
+dict_items([(1, 'Janeiro'), (2, 'Fevereiro')])
+>>> for chave, item in meses.items():
+...     print(f'Chave: {chave} , Item: {item}')
+...
+Chave: 1 , Item: Janeiro
+Chave: 2 , Item: Fevereiro
+
+-x-
+- Para ler ou modificar um elemento do dicionário, temos que usar a chave do elemento entre colchetes.
+- EX:
+>>> estoque['jabuticaba']
+100
+>>> estoque['jabuticaba'] -= 50
+>>> estoque['jabuticaba']
+50
+>>> estoque
+{'açai': 200, 'biriba': 50, 'jabuticaba': 50, 'abiu': 20}
+
+- Para adicionar elementos dentro de um Dicionário, utilizamos a função **Update({'chave':valor})**, que funciona como um append()
+    > A segunda forma é pela criação de um chave com a atribuição de um valor associado a ela
+    - EX:
+    >>> estoque['araçaboi'] = 82
+    >>> estoque
+    {'açai': 200, 'biriba': 50, 'jabuticaba': 50, 'abiu': 20, 'araçaboi': 82}
+
+- Podemos utilizar as atribuições **in** e  **not in** para verificar de existem chaves com os valores correspondentes dentro do dicionário
+- É possível percorrer os elementos de um dicionário utilzando for
+- EX:
+estoque = {'açai':50, 'cupuaçú':4, 'biribá':10}
+>>> for chave in estoque: # estoque.keys()
+...     valor = estoque[chave]
+...     print(f'Temos {valor} unidades de {chave} no estoque.')
+
+-x-
+
+- Com dicionários, ocorre o mesmo efeito que ocorre com cópia de listas – o que é copiado é o endereço de memória, e portanto, alterações nas cópias são refletidas umas nas outras.
+-EX:
+>>> estoque
+{'açai': 200, 'biriba': 50, 'jabuticaba': 50, 'abiu': 20, 'araçaboi': 82}
+>>> caixa2 = estoque
+>>> caixa2
+{'açai': 200, 'biriba': 50, 'jabuticaba': 50, 'abiu': 20, 'araçaboi': 82}
+>>> caixa2['açai'] -= 100
+>>> estoque
+{'açai': 100, 'biriba': 50, 'jabuticaba': 50, 'abiu': 20, 'araçaboi': 82}
+
+- Para não alterarem o mesmo endereço de memória, deve-se utilizar a função copy() para criar uma cópia da lista
+
+- Para apagar tudo da lista, deve-se utilizar uma função clear()
+    > Para apagar um elemento em específico, deve-se utilizar a função pop("CHAVE")
