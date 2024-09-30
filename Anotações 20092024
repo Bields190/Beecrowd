@@ -1,0 +1,26 @@
+-x-x-x-x-x-x-x-x-x-x-x-x-x-x-FUNÇÕES-x-x-x-x-x-x-x-x-x-x-x-x-x-x
+
+- Funções podem ser utilizadas para organizar o código;
+
+- Nesse caso, podemos criar e utilizar funções que podemos criar (com alguma definição)
+
+- EX de funções:
+    * type, len, int, float, print, input...
+
+- Funções são códigos compartilhados.
+- Definimos um nome e chamamos a função ao longo do programa
+
+- Usamos >def< para definir função e >return< para devolver alguma coisa
+    * Porém existem funções que não retornam nada.
+
+-x-x-x-x-x-x-x-x-x-x-x-x-x-SINTAXE-x-x-x-x-x-x-x-x-x-x
+>>> def nomeEscolhido(lista de parâmetros):
+    suite do corpo da função
+- A lista de parâmetros pode ter zero ou mais parametros, separado por vírgula.
+- CUIDADO COM RETURN!
+
+-x-x-x-x-x-x-x-x-x-x-x-x-x-SUBPROGRAMAS-x-x-x-x-x-x-x-x-x-x-x-x-x
+- Nesse conceito, devemos criar a função antes do programa principal, isto é: temos que "declarar" a função antes de utilizarmos
+
+-x-x-x-x-x-x-x-x-x-x-x-x-x-VARIÁVEIS GLOBAIS E FUNÇÕES-x-x-x-x-x-x-x-x-x-x-x-x-x
+- 
