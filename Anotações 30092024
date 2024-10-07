@@ -22,3 +22,22 @@
 -x-x-x-x-x-x-x-x-x-x-x-x-x-SUBPROGRAMAS-x-x-x-x-x-x-x-x-x-x-x-x-x
 - Nesse conceito, devemos criar a função antes do programa principal, isto é: temos que "declarar" a função antes de utilizarmos
 
+-X-X-X-X--X-X-X-X-XX-X-X--X-X---X--X-X--X-X---X-X
+
+PARÂMETROS DE FUNÇÕES:
+- *args
+
+- caso uma função precise receber um numero variável de parâmetros, pode-se utilizar o argumento (*args)
+- esse, abre o escopo para a função, em que independentemente da quantidade de dados inseridos, ele funciona mesmo assim.
+
+- *kwargs
+
+- Neste, usa-se todos os itens de uma lista (ou de dentro da função, no caso)
+
+- Funções Anônimas (lambda)
+
+- funções que podem ser escritas em uma linha e não precisam definir um nome e muito menos o "def".
+- EX:
+
+>>> funcao_soma = lambda x, y: x+y
+>>> print((lambda x, y: x+y)(6,7))

@@ -1,0 +1,20 @@
+-x-x-x-x-x-x-x-x-x-x-x-x-x-x-x-FUNÇÕES ANÔNIMAS - CONTINUAÇÃO-x-x-x-x-x-x-x-x-x-x
+- Aas funções lambda são pouco utilizadas por falta de uso prático;
+- Existem formas de usar o lambda sem deixar o código completamente ilegível
+- EX: utilizando funções:
+    * map(): quando queremos aplicar uma função a cada item de uma lista e retornar uma nova lista com os elementos resultantes da função aplicada
+    * filter(): quando queremos filtrar uma sequência a partir de uma função. Tem retorno booleano, portanto, quando aplicada à uma sequência, só retornará o que for True
+    * reduce(): quando precisamos agregar todos os elementos de um conjunto, lista ou sequência em um único valor
+
+- As funções anônimas dão uma gama de possibilidades para podermos fazer coisas mais específicas.
+
+-x-x-x-CONSIDERAÇÕES-x-x-x-
+
+- O melhor uso das funções anônimas está no contexto de uma lista de argumentos
+- Suas restrições sintáticas tendem a deixar o código não trivial e legível
+
+-Se você encontrar o código difícil por causa de uma função lambda, Frederik Lunch sugere o seguinte procedimento de refatoração:
+    * Escreva um comentário explicando que cargas d’água esse lambda faz
+    * Estude o comentário e pense em um nome que capture a essência do comentário
+    * Converta o lambda em um bloco def usando esse nome
+    * Use o nome do bloco def e remova o lambda
