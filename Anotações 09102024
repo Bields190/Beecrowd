@@ -1,0 +1,23 @@
+-x-x-x-x-x-x-x-x-LIST COMPREHENSION-x-x-x--x-x-x-x-x-x-
+- Em python, é uma maneira compacta de criar listas a partir de outris iteráveis (listas, tuplas e strings)
+- Permite transformar, filtrar e combinar elementos em uma **única linha de código**
+- Consiste em um [par de colchetes] contendo uma expressão seguida de uma clausula for, e então zero ou mais cláusulas for ou if
+
+- VANTAGENS:
+    * Requer menos linhas de código
+    * Mais eficiente em termos de tempo e espaço que loops iterativos
+    * Transformar a instrução iterativa em uma formula
+
+- DESVANTAGENS:
+    * Complexidade excessiva
+    * Dificulta a legibilidade do código
+
+
+- SINTAXE:::::
+
+lista_nova = [ expressão(item) for item in iterável if condição ]
+
+    * EXPRESSÃO: valor que será inserido na lista nova
+    * ITEM: variável temporária que percorre cada item da iterável
+    * ITERÁVEL: qualquer coleção (lista, tupla, string, etc.) ou objeto iterável
+    * CONDIÇÃO
