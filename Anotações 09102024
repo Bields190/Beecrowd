@@ -1,7 +1,7 @@
 -x-x-x-x-x-x-x-x-LIST COMPREHENSION-x-x-x--x-x-x-x-x-x-
 - Em python, é uma maneira compacta de criar listas a partir de outris iteráveis (listas, tuplas e strings)
 - Permite transformar, filtrar e combinar elementos em uma **única linha de código**
-- Consiste em um [par de colchetes] contendo uma expressão seguida de uma clausula for, e então zero ou mais cláusulas for ou if
+- Consiste em um [par de colchetes] contendo uma expressão seguida de uma clausula for, e então zero ou mais cláusulas   for ou if
 
 - VANTAGENS:
     * Requer menos linhas de código

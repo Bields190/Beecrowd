@@ -48,3 +48,8 @@ print(f'Unicas Vogais: ', unicas_vogais)
 #Dicionário:
 vogais_dict = {i:frase.count(i) for i in frase if i in 'aeEiou'}
 print(f"Dicionarizado: ", vogais_dict)
+#Gerar uma função geradora
+geradora = (i*i for i in num)
+print(geradora)
+for g in geradora:
+    print(g)
