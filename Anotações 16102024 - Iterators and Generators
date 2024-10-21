@@ -1,0 +1,7 @@
+- Tudo o que a gente consegue percorrer em um laço a gente pode chamar de "iterável"
+
+- Como funciona?
+    * possui o método "__next__()" que acessa os elementos na coleção, um de cada vez.
+    * Quando não existirem elementos, o método __next__() levanta uma exceção StopIteration que é reconhecida pelo laço como o fim da iteração
+    * O método __next__() pode ser chamado através da função "next(iterator)".
+    * A função iter() em uma sequencia (ou coleção) retorna um objeto iterator

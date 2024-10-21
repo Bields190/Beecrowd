@@ -1,0 +1,26 @@
+-x-x-x-x-x-x-x-x-x-EXCEÇÕES-x-x-x-x-x-x-x-x-x-x-x-
+
+- Existem dois tipos de erros que ocorrem ao escrever códigos:
+    * Erro de sintaxe (erros na estrutura de um comando ou expressão)
+    * Erro lógico (O programa é executado mas dá o resultado errado devido a algum erro no algoritmo ou na tradução)
+
+- As exceções são eventos especiais - geralmente erros - que ocorrem em tempo de execução.
+- Em python, exceção é um objeto da classe Exception ou de uma de suas subclasses, permite armazenar informações sobte situações excepcionais que venham a ocorrer durante a execução do código
+- Esse objeto deve ser manipulado corretamente, caso contrário, teremos um "traceback"
+
+- o Try funciona como um "Jump", caso o erro aconteça, ele PULA diretamente pro except
+
+- Finally:
+    * All código inserido em uma cláusula "Finally" é executado independentemente de ter havido ou não erros na execução do bloco try
+
+#Lançamento de Exceções:
+
+- Podemos lançar exceções diretamente com a palavra-chave "raise". Quando uma declaração raise é executada, Python cria um objeto da classe de exceção especificada
+- SINTAXE:
+>>> if (condição):
+        raise ValueError ('<erro>')
+    ...
+    * Dessa forma, ele age como um erro e faz o "jump" também
+
+# Definindo Exceções:
+- No
