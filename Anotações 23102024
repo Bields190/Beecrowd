@@ -1,0 +1,30 @@
+-x-x-x-x-x-x-x-x-x-x-BOAS PRÁTICAS-x-x-x-x-x-x-x-x-x-
+
+- Não utilizar exceções para o fluxo principal da aplicação
+
+- Interceptar exceções somente quando você sabe como tratá-la
+
+- Conhecer as exceções
+
+- Asserções e Assertion Error
+    * Em python, asserções são instruções booleanas usadas para fazer verificações durante o processo de desenvolvimento. Permitem testar o código, verificando se condições específicas são verdadeiras
+    * Pode ser útil durante a depuração do código
+    *- A condição da asserção deve ser verdadeira, a menos que haja um bug.
+        -> se a condição for falsa, a asserção gera uma exceção, encerra o programa e exibe o erro
+- Para que servem as asserções?
+    * Usadas para depuração. Ajudam a diminuir novos bugs no código. Podem seru usados para documentação e testes
+    * Verificam pré-condições e pós-condições.
+    * Podem incluir uma mensagem opcional para descrever o erro ou problema em questão
+    * São ideais para escrever casos de teste de código
+
+- Quando não usar asserções?
+    * Processamento ou validação de dados
+    * NÃO são uma ferramenta de tratamento de erros
+        -> logo, não deve escrever um código que capture erros de asserção usando um try/except
+        -> Python implementa asserções como uma instrução com a palavra-chave assert em vez de uma função.
+
+- SINTAXE:
+
+assert expressão [, mensagem]
+
+    * Aqui, expressão pode ser qualquer expressão ou objeto python válido, cuja veracidade é testada. Se a expressão for falsa, a instrução lançará a AssertionError
